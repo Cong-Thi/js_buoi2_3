@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+    <div class="container py-5 text-center ">
+        <h1>Bài Tập JavaScript Buổi 2-3</h1>
+        <div class="row py-5 home">
+            <div class="col-2 pl-3 nav flex-column nav-pills" id="v-pills-tab" role="tablist"
+                aria-orientation="vertical">
+                <a class="nav-link active" data-toggle="pill" href="#bai1" role="tab" aria-selected="true">Bài 1</a>
+                <a class="nav-link" data-toggle="pill" href="#bai2" role="tab" aria-selected="false">Bài 2</a>
+                <a class="nav-link" data-toggle="pill" href="#bai3" role="tab" aria-selected="false">Bài 3</a>
+                <a class="nav-link" data-toggle="pill" href="#bai4" role="tab" aria-selected="false">Bài 4</a>
+                <a class="nav-link" data-toggle="pill" href="#bai5" role="tab" aria-selected="false">Bài 5</a>
+            </div>
+            <div class="col-10 tab-content" id="v-pills-tabContent">
+                <div class="tab-pane fade show active" id="bai1" role="tabpanel">
+                    <h2>Tính Lương Nhân Viên</h2>
+                    <div class="form-group">
+                        <input type="number" name="" id="luongNgay" class="form-control" placeholder="Nhập lương 1 ngày"
+                            aria-describedby="helpId">
+                    </div>
+                    <div class="form-group">
+                        <input type="number" name="" id="soNgayCong" class="form-control" placeholder="Nhập số ngày làm"
+                            aria-describedby="helpId">
+                    </div>
+                    <button onclick="tinhTienLuong()" class="btn btn-primary">Tính Lương</button>
+                    <div class="alert" id="alert1"></div>
+                </div>
+                <div class="tab-pane fade" id="bai2" role="tabpanel">
+                    <h2>Tính Giá Trị Trung Bình</h2>
+                    <div class="form-group">
+                        <input type="number" name="" id="giaTri1" class="form-control mb-2" placeholder="Nhập số thứ 1"
+                            aria-describedby="helpId">
+                    </div>
+                    <div class="form-group">
+                        <input type="number" name="" id="giaTri2" class="form-control mb-2" placeholder="Nhập số thứ 2"
+                            aria-describedby="helpId">
+                    </div>
+                    <div class="form-group">
+                        <input type="number" name="" id="giaTri3" class="form-control mb-2" placeholder="Nhập số thứ 3"
+                            aria-describedby="helpId">
+                    </div>
+                    <div class="form-group">
+                        <input type="number" name="" id="giaTri4" class="form-control mb-2" placeholder="Nhập số thứ 4"
+                            aria-describedby="helpId">
+                    </div>
+                    <div class="form-group">
+                        <input type="number" name="" id="giaTri5" class="form-control mb-2" placeholder="Nhập số thứ 5"
+                            aria-describedby="helpId">
+                    </div>
+                    <button onclick="tinhTB()" class="btn btn-primary">Tính Trung Bình</button>
+                    <div class="alert" id="alert2"></div>
+                </div>
+                <div class="tab-pane fade" id="bai3" role="tabpanel">
+                    <h2>Quy Đổi Tiền USD -> VNĐ</h2>
+                    <div class="form-group">
+                        <input type="number" name="" id="soTienUSD" class="form-control" placeholder="Nhập số tiền USD"
+                            aria-describedby="helpId">
+                    </div>
+                    <button onclick="chuyenDoiTien()" class="btn btn-primary">Chuyển Đổi</button>
+                    <div class="alert" id="alert3"></div>
+                </div>
+                <div class="tab-pane fade" id="bai4" role="tabpanel">
+                    <h2>Tính Diện Tích, Chu Vi Hình Chữ Nhật</h2>
+                    <div class="form-group">
+                        <input type="number" name="" id="chieuDai" class="form-control"
+                            placeholder="Nhập chiều dài hình chữ nhật" aria-describedby="helpId">
+                    </div>
+                    <div class="form-group">
+                        <input type="number" name="" id="chieuRong" class="form-control"
+                            placeholder="Nhập chiều rộng hình chữ nhật" aria-describedby="helpId">
+                    </div>
+                    <button onclick="tinh()" class="btn btn-primary">Tính</button>
+                    <div class="alert" id="alert4"></div>
+                </div>
+                <div class="tab-pane fade" id="bai5" role="tabpanel">
+                    <h2>Tổng 2 ký số</h2>
+                    <div class="form-group">
+                        <label for=""></label>
+                        <input type="number" name="" id="soTuNhien" class="form-control" placeholder="Nhập số có 2 chữ số"
+                            aria-describedby="helpId">
+                    </div>
+                    <button onclick="tongKySo()" class="btn btn-primary">Tính Tổng</button>
+                    <div class="alert" id="alert5"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./index.js"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
